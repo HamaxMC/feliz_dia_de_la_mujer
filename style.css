@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kotta+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo animado con gradiente */
+body {
+    background: linear-gradient(45deg, #C596DB, #A1D6E2, #F7C59F);
+    background-size: 600% 600%;
+    animation: gradient 15s ease infinite;
+    overflow: hidden;
+}
+
+/* Contenedor para los destellos en toda la página */
+.sparkles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999; /* Asegura que los destellos queden por encima de todos los elementos */
+}
+.sparkles div {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle 2s infinite;
+}
+
+/* Varias posiciones y delays para dar efecto disperso */
+.sparkles div:nth-child(1) {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0.5s;
+}
+.sparkles div:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-delay: 1s;
+}
+.sparkles div:nth-child(3) {
+    top: 80%;
+    left: 40%;
+    animation-delay: 1.5s;
+}
+.sparkles div:nth-child(4) {
+    top: 35%;
+    left: 80%;
+    animation-delay: 0.8s;
+}
+.sparkles div:nth-child(5) {
+    top: 65%;
+    left: 15%;
+    animation-delay: 1.2s;
+}
+.sparkles div:nth-child(6) {
+    top: 10%;
+    left: 50%;
+    animation-delay: 0.3s;
+}
+.sparkles div:nth-child(7) {
+    top: 75%;
+    left: 90%;
+    animation-delay: 1.8s;
+}
+.sparkles div:nth-child(8) {
+    top: 45%;
+    left: 20%;
+    animation-delay: 0.7s;
+}
+.sparkles div:nth-child(9) {
+    top: 90%;
+    left: 60%;
+    animation-delay: 1.4s;
+}
+.sparkles div:nth-child(10) {
+    top: 25%;
+    left: 10%;
+    animation-delay: 1.1s;
+}
+
+
+/* Animación para los destellos */
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.form input,
+button {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    border: 0;
+    border-radius: 50px;
+    outline: none;
+    font-size: 24px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 8px;
+}
+
+.form input {
+    text-align: center;
+    color: #8b3d6d;
+    background-color: #EEEEEE;
+}
+
+.form button {
+    background-color: #8b3d6d;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.tulipanes {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.flor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 353px;
+    transform-origin: bottom center;
+}
+
+/* Las clases adicionales mantienen sus transformaciones originales */
+.flor2 {
+    transform: scale(0.9) rotate(-30deg);
+    z-index: -100000;
+}
+
+.flor3 {
+    transform: scale(0.85) rotate(20deg);
+    z-index: -100000;
+}
+
+.flor .tallo {
+    position: relative;
+}
+
+.flor .hojas {
+    position: absolute;
+    top: 0px;
+    z-index: -1000;
+}
+
+.flor .tallo .hojas .h1 {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+
+.flor .tallo .hojas .h2 {
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.flor .petalos {
+    position: absolute;
+    bottom: 465px;
+    z-index: 1000;
+    left: -35px;
+}
+
+.flor .petalos .p1 {
+    position: absolute;
+}
+
+.flor .petalos .p2 {
+    position: absolute;
+    left: 29px;
+    top: -10px;
+    z-index: -100;
+}
+
+.flor .petalos .p3 {
+    position: absolute;
+    left: -3px;
+    top: -15px;
+    z-index: -1000;
+}
+
+.flor .petalos .p4 {
+    position: absolute;
+    left: 65px;
+    top: -10px;
+    z-index: -10000;
+}
+
+.flor .petalos .p5 {
+    position: absolute;
+    z-index: -100000;
+    top: -18px;
+    left: 18px;
+}
+
+.mensaje {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Título con destello en el nombre */
+.mensaje h1 {
+    font-family: "Kristi", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.mensaje h1 span {
+    animation: flashName 3s infinite;
+    color: #ffffff;
+}
+
+.mensaje p {
+    font-family: "Kotta One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #5b5b5b;
+}
+
+/* Animaciones */
+@keyframes crecerTallo {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes aparecerHojas {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes florecerPetalos {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes viento {
+    0% { transform: translateX(0) rotate(0deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Animación de destello en el nombre */
+@keyframes flashName {
+    0%, 100% { text-shadow: 0 0 5px #fff; }
+    50% { text-shadow: 0 0 20px #ffffff; }
+}
+
+/* Animaciones de crecimiento */
+.flor .tallo {
+    transform-origin: bottom center;
+    transform: scaleY(0);
+    animation: crecerTallo 2s ease-out forwards;
+}
+
+.flor .hojas {
+    opacity: 0;
+    animation: aparecerHojas 1s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.flor .petalos .p1, 
+.flor .petalos .p2, 
+.flor .petalos .p3, 
+.flor .petalos .p4, 
+.flor .petalos .p5 {
+    opacity: 0;
+    transform: scale(0);
+    animation: florecerPetalos 1s ease-out forwards;
+}
+
+.flor .petalos .p1 { animation-delay: 3s; }
+.flor .petalos .p2 { animation-delay: 3.2s; }
+.flor .petalos .p3 { animation-delay: 3.4s; }
+.flor .petalos .p4 { animation-delay: 3.6s; }
+.flor .petalos .p5 { animation-delay: 3.8s; }
+
+/* Efecto de viento con rotación */
+.viento-wrapper {
+    display: inline-block;
+    animation: viento 4s ease-in-out infinite;
+    animation-delay: 4s; /* Se inicia cuando la flor ya apareció */
+}
+
+/* ===== Ajustes responsivos ===== */
+@media screen and (max-width: 750px) {
+    main {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    
+    /* Opcional: si prefieres escalar el contenedor de las flores */
+    
+    .tulipanes {
+        transform: scale(0.6);
+        transform-origin: bottom center;
+    }
+    
+    /* Ajustes en textos y formularios para pantallas pequeñas */
+
+    .mensaje{
+        text-align: center;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mensaje h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
+    .mensaje p {
+        font-size: 18px;
+    }
+    
+    .form {
+        width: 250px;
+    }
+    
+    .form input,
+    .form button {
+        height: 40px;
+        font-size: 18px;
+    }
+}
