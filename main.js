@@ -25,6 +25,6 @@ function cargar(codigo){
 entrar.addEventListener("click", ()=>{
     let codigoIngresado = codigoInput.value.trim().toLowerCase();
     if(codigos[codigoIngresado]){
-        cargar(codigo.value);
+        cargar(codigoIngresado);
     }
 })
