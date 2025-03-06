@@ -7,23 +7,24 @@ let codigos = {
     "meli.19": ["Melanie", "Meli eres una mujer increíble, fuerte y llena de luz ✨. Que hoy y siempre recibas todo el amor, el reconocimiento y las oportunidades que mereces. Sigue brillando y conquistando el mundo con tu esencia única. 💖🌸"]
 }
 
-let codigo = document.getElementById("codigo")
-let entrar = document.getElementById("entrar")
+let codigo = document.getElementById("codigo");
+let entrar = document.getElementById("entrar");
 
 function cargar(codigo){
-    let nombre = codigos[codigo][0]
-    let mensaje = codigos[codigo][1]
+    let nombre = codigos[codigo][0];
+    let mensaje = codigos[codigo][1];
 
-    document.getElementById("login").style.display = "none"
-    document.getElementById("main").style.display = "flex"
+    document.getElementById("login").style.display = "none";
+    document.getElementById("main").style.display = "flex";
 
-    document.getElementById("nombre").textContent = `${nombre}`
-    document.getElementById("mensaje").textContent = mensaje
+    document.getElementById("nombre").textContent = `${nombre}`;
+    document.getElementById("mensaje").textContent = mensaje;
 
 }
 
 entrar.addEventListener("click", ()=>{
-    if(codigos[codigo.value] != undefined){
-        cargar(codigo.value)
+    let codigoIngresado = codigoInput.value.trim().toLowerCase();
+    if(codigos[codigoIngresado]){
+        cargar(codigo.value);
     }
 })
